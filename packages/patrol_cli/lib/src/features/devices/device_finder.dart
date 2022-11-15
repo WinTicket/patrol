@@ -15,7 +15,7 @@ class DeviceFinder {
   Future<List<Device>> getAttachedDevices() async {
     final output = await _getCommandOutput();
 
-    _logger.info(
+    _logger.err(
       '[DeviceFinder.getAttachedDevices] output: $output',
     );
 
