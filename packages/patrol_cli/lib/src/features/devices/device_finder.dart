@@ -14,6 +14,11 @@ class DeviceFinder {
 
   Future<List<Device>> getAttachedDevices() async {
     final output = await _getCommandOutput();
+
+    _logger.info(
+      '[DeviceFinder.getAttachedDevices] output: $output',
+    );
+
     final jsonOutput = jsonDecode(output) as List<dynamic>;
 
     final devices = <Device>[];
