@@ -15,9 +15,7 @@ class DeviceFinder {
   Future<List<Device>> getAttachedDevices() async {
     final output = await _getCommandOutput();
 
-    _logger.err(
-      '[DeviceFinder.getAttachedDevices] output: $output',
-    );
+    throw Exception('[DeviceFinder.getAttachedDevices] output: $output');
 
     final jsonOutput = jsonDecode(output) as List<dynamic>;
 
